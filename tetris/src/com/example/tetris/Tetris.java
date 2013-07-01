@@ -14,7 +14,7 @@ public class Tetris extends Activity {
         private Button mPauseButton;
         private Button mResumeButton;
         private Button mResetButton;
-        private TextView highscore;
+        //private TextView highscore;
         private TextView playerscore;
         
         
@@ -25,8 +25,7 @@ public class Tetris extends Activity {
         setContentView(R.layout.activity_tetris);
 
         
-        mTetrisView = (TetrisTileView) findViewById(R.id.tetris_tile_view);
-        
+        mTetrisView = (TetrisTileView) findViewById(R.id.tetris_tile_view);        
         mStartButton = (Button) findViewById(R.id.start_button);
         mStartButton.setFocusable(false);
         mPauseButton = (Button) findViewById(R.id.pause_button);
@@ -37,7 +36,7 @@ public class Tetris extends Activity {
         mResumeButton.setVisibility(View.INVISIBLE);
         mResetButton = (Button) findViewById(R.id.reset_button);
         mResetButton.setFocusable(false);
-        highscore=(TextView) findViewById(R.id.high_score);
+        //highscore=(TextView) findViewById(R.id.high_score);
         playerscore=(TextView) findViewById(R.id.player_score);
         mResetButton.setVisibility(View.INVISIBLE);
         
@@ -60,7 +59,7 @@ public class Tetris extends Activity {
                 String player_score="SCORE "+mTetrisView.player_score;
                 playerscore.setText(player_score);                
                 playerscore.setVisibility(View.VISIBLE);
-                highscore.setVisibility(View.VISIBLE);
+                //highscore.setVisibility(View.VISIBLE);
                 mTetrisView.setMode(TetrisTileView.PAUSE);
             }
         });
